@@ -1,4 +1,4 @@
-public class AffCase4
+public class AffCase2
 {
     public static async Task RunAsync()
     {
@@ -10,14 +10,13 @@ public class AffCase4
             return a++;
         }
 
-        var f = Aff(AddAsync().ToValue);
-
         var q = from _1 in unitAff
+                let f = Aff(AddAsync().ToValue)
                 from _2 in f.Repeat(Schedule.Once | Schedule.repeat(1))
                 select unit;
 
         var r = await q.Run();
 
-        Console.WriteLine($"AffCase4: {a}");
+        Console.WriteLine($"AffCase2: {a}");
     }
 }
