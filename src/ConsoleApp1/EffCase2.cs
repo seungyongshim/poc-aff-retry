@@ -1,22 +1,21 @@
-public class Case1
+public class EffCase2
 {
     public static async Task RunAsync()
     {
         var a = 0;
 
-        async Task<int> AddAsync()
+        int Add() 
         {
-            await Task.Delay(0);
             return a++;
         }
 
         var q = from _1 in unitAff
-                let f = Aff(() => AddAsync().ToValue())
+                let f = Eff(Add)
                 from _2 in f.Repeat(Schedule.Once | Schedule.repeat(1))
                 select unit;
 
         var r = await q.Run();
 
-        Console.WriteLine($"Case1: {a}");
+        Console.WriteLine($"EffCase2: {a}");
     }
 }

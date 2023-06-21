@@ -1,2 +1,5 @@
-await Case1.RunAsync();
-await Case2.RunAsync();
+await EffCase1.RunAsync();
+await EffCase2.RunAsync();
+await AffCase1.RunAsync();
+await AffCase2.RunAsync();
+await AffCase3.RunAsync();
