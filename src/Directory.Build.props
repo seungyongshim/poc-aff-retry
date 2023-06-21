@@ -13,6 +13,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
     <None Include="$(SolutionDir)..\icon.png" Pack="true" PackagePath="\"/>
+    <PackageReference Include="CommunityToolkit.HighPerformance" Version="8.*" />
+	  <PackageReference Include="LanguageExt.Core" Version="4.*" />
+    <Using Include="LanguageExt"/>
+    <Using Include="LanguageExt.Prelude">
+      <Static>True</Static>
+    </Using>
   </ItemGroup>
   <PropertyGroup>
     <PackageIcon>icon.png</PackageIcon>
